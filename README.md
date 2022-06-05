@@ -1,6 +1,6 @@
-# approle
+# Roles App
 
-A new Flutter project.
+Project app for multi-role member with Firebase
 
 ## Getting Started
 
