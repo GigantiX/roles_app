@@ -7,7 +7,10 @@ import 'package:get/get.dart';
 import '../controllers/signup_controller.dart';
 
 class SignupView extends GetView<SignupController> {
+
   final authC = Get.find<AuthController>();
+  var pass = true.obs;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,15 +18,15 @@ class SignupView extends GetView<SignupController> {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Image.asset(
-                'assets/images/logo1.png',
-                height: 280,
-                width: 280,
+                'assets/images/iconRoles.png',
+                height: 260,
+                width: 260,
               ),
               Container(
-                height: 340,
+                height: 360,
                 width: 350,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -32,26 +35,47 @@ class SignupView extends GetView<SignupController> {
                 child: Padding(
                   padding: const EdgeInsets.all(10),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
+                      Text(
+                        'SIgn Up',
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       TextField(
                         controller: controller.emailC,
+                        textInputAction: TextInputAction.next,
                         decoration: InputDecoration(
                             labelText: "Email",
                             prefixIcon: Icon(Icons.mail),
-                            border: OutlineInputBorder()
-                        ),
+                            border: OutlineInputBorder()),
                       ),
                       SizedBox(
                         height: 20,
                       ),
-                      TextField(
+                      Obx(() => TextField(
                         controller: controller.passC,
+                        textInputAction: TextInputAction.done,
+                        obscureText: pass.value,
                         decoration: InputDecoration(
                             labelText: "Password",
-                            prefixIcon: Icon(Icons.password),
+                            prefixIcon: Icon(Icons.key),
+                            suffixIcon: IconButton(
+                                onPressed: (){
+                                  if (pass.value == true){
+                                    pass.value = false;
+                                  }else{
+                                    pass.value = true;
+                                  }
+                                },
+                                icon: Icon(Icons.remove_red_eye)
+                            ),
                             border: OutlineInputBorder()
                         ),
+                      ),
                       ),
                       SizedBox(
                         height: 20,
@@ -66,8 +90,7 @@ class SignupView extends GetView<SignupController> {
                               side: BorderSide(color: Colors.white),
                             ),
                             padding: EdgeInsets.all(5),
-                            minimumSize: Size(330, 45)
-                        ),
+                            minimumSize: Size(330, 45)),
                       ),
                       SizedBox(
                         height: 10,
@@ -77,24 +100,38 @@ class SignupView extends GetView<SignupController> {
                         height: 10,
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
-                            width: 5,),
-                          IconButton(
+                            width: 5,
+                          ),
+                          ElevatedButton(
                             onPressed: () => Get.toNamed(Routes.SIGNUP),
-                            icon: Icon(Icons.phone),
+                            child: Icon(Icons.phone, color: Colors.white),
+                            style: ElevatedButton.styleFrom(
+                                shape: CircleBorder(),
+                                primary: Colors.blue,
+                                // <-- Button color
+                                onPrimary: Colors.red,
+                                // <-- Splash color
+                                fixedSize: const Size(50, 50)
+                            ),
+                          ),
+                          SizedBox(
+                            width: 30,
                           ),
                           ElevatedButton(
                             onPressed: () {},
                             child: Icon(Icons.mail, color: Colors.white),
                             style: ElevatedButton.styleFrom(
                                 shape: CircleBorder(),
-                                padding: EdgeInsets.all(20),
-                                primary: Colors.blue, // <-- Button color
-                                onPrimary: Colors.red, // <-- Splash color
-                                minimumSize: Size(10, 10)
+                                primary: Colors.blue,
+                                // ^ Button color
+                                onPrimary: Colors.red,
+                                // ^ Splash color
+                                fixedSize: const Size(50, 50)
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ],
