@@ -20,7 +20,7 @@ class LoginView extends GetView<LoginController> {
         constraints: BoxConstraints.expand(),
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/bgapp.jpg'),
+              image: AssetImage('assets/images/bgwhite.jpg'),
               fit: BoxFit.cover
           ),
         ),
