@@ -62,7 +62,8 @@ class LoginView extends GetView<LoginController> {
                               labelText: "Email",
                               prefixIcon: Icon(Icons.mail),
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10))),
+                                  borderRadius: BorderRadius.circular(10))
+                          ),
                         ),
                         SizedBox(
                           height: 20,
@@ -84,7 +85,10 @@ class LoginView extends GetView<LoginController> {
                                       }
                                     },
                                     icon: Icon(Icons.remove_red_eye)),
-                                border: OutlineInputBorder()),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10)
+                                )
+                            ),
                           ),
                         ),
                         SizedBox(
@@ -116,14 +120,12 @@ class LoginView extends GetView<LoginController> {
                               width: 5,
                             ),
                             ElevatedButton(
-                              onPressed: () => Get.toNamed(Routes.SIGNUP),
+                              onPressed: () => Get.toNamed(Routes.PHONELOGIN),
                               child: Icon(Icons.phone, color: Colors.white),
                               style: ElevatedButton.styleFrom(
                                   shape: CircleBorder(),
                                   primary: Colors.blue,
-                                  // <-- Button color
                                   onPrimary: Colors.red,
-                                  // <-- Splash color
                                   fixedSize: const Size(50, 50)),
                             ),
                             SizedBox(
