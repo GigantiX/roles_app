@@ -47,7 +47,7 @@ class LoginView extends GetView<LoginController> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          'Login',
+                          'Email Login',
                           style: TextStyle(
                               fontSize: 30, fontWeight: FontWeight.bold),
                         ),

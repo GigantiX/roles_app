@@ -46,7 +46,7 @@ class SignupView extends GetView<SignupController> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          'Sign Up',
+                          'Email Sign Up',
                           style: TextStyle(
                               fontSize: 30, fontWeight: FontWeight.bold),
                         ),
