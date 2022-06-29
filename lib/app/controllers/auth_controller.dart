@@ -102,31 +102,7 @@ class AuthController extends GetxController {
     }
   }
 
-  void verifyNumber() async {
-    await FirebaseAuth.instance.verifyPhoneNumber(
-      phoneNumber: '+44 7123 123 456',
-      verificationCompleted: (PhoneAuthCredential credential) async {
-        await auth.signInWithCredential(credential);
-      },
-      verificationFailed: (FirebaseAuthException e) {
-        if (e.code == 'invalid-phone-number') {
-          print('The provided phone number is not valid.');
-          Get.defaultDialog(
-            title: 'Phone Number Eror',
-            middleText:
-            'The provided phone number is not valid.',
-            textConfirm: 'OK',
-            onConfirm: () {
-              Get.back();
-              Get.back();
-            },
-          );
-        }
-      },
-      codeSent: (String verificationId, int? resendToken) {},
-      codeAutoRetrievalTimeout: (String verificationId) {},
-    );
-  }
+
 
   void logout() async {
     await FirebaseAuth.instance.signOut();
