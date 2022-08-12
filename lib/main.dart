@@ -1,11 +1,8 @@
 import 'package:approle/app/controllers/auth_controller.dart';
-import 'package:approle/app/modules/home/views/home_view.dart';
-import 'package:approle/app/modules/login/views/login_view.dart';
 import 'package:approle/utils/loading.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'firebase_options.dart';
 import 'package:get/get.dart';
 import 'app/routes/app_pages.dart';
 
