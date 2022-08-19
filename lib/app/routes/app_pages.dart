@@ -4,6 +4,8 @@ import 'package:approle/app/modules/home/bindings/home_binding.dart';
 import 'package:approle/app/modules/home/views/home_view.dart';
 import 'package:approle/app/modules/login/bindings/login_binding.dart';
 import 'package:approle/app/modules/login/views/login_view.dart';
+import 'package:approle/app/modules/otpscreen/bindings/otpscreen_binding.dart';
+import 'package:approle/app/modules/otpscreen/views/otpscreen_view.dart';
 import 'package:approle/app/modules/phonelogin/bindings/phonelogin_binding.dart';
 import 'package:approle/app/modules/phonelogin/views/phonelogin_view.dart';
 import 'package:approle/app/modules/signup/bindings/signup_binding.dart';
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.PHONELOGIN,
       page: () => PhoneloginView(),
       binding: PhoneloginBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTPSCREEN,
+      page: () => OtpscreenView(),
+      binding: OtpscreenBinding(),
     ),
   ];
 }
