@@ -1,5 +1,13 @@
 import 'package:get/get.dart';
 
+import 'package:approle/app/modules/contentcourse/bindings/contentcourse_binding.dart';
+import 'package:approle/app/modules/contentcourse/views/contentcourse_view.dart';
+import 'package:approle/app/modules/contentevent/bindings/contentevent_binding.dart';
+import 'package:approle/app/modules/contentevent/views/contentevent_view.dart';
+import 'package:approle/app/modules/contenthome/bindings/contenthome_binding.dart';
+import 'package:approle/app/modules/contenthome/views/contenthome_view.dart';
+import 'package:approle/app/modules/contentprofile/bindings/contentprofile_binding.dart';
+import 'package:approle/app/modules/contentprofile/views/contentprofile_view.dart';
 import 'package:approle/app/modules/home/bindings/home_binding.dart';
 import 'package:approle/app/modules/home/views/home_view.dart';
 import 'package:approle/app/modules/login/bindings/login_binding.dart';
@@ -43,6 +51,26 @@ class AppPages {
       name: _Paths.OTPSCREEN,
       page: () => OtpscreenView(),
       binding: OtpscreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.CONTENTHOME,
+      page: () => ContenthomeView(),
+      binding: ContenthomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.CONTENTEVENT,
+      page: () => ContenteventView(),
+      binding: ContenteventBinding(),
+    ),
+    GetPage(
+      name: _Paths.CONTENTCOURSE,
+      page: () => ContentcourseView(),
+      binding: ContentcourseBinding(),
+    ),
+    GetPage(
+      name: _Paths.CONTENTPROFILE,
+      page: () => ContentprofileView(),
+      binding: ContentprofileBinding(),
     ),
   ];
 }

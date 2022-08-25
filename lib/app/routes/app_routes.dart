@@ -9,6 +9,10 @@ abstract class Routes {
   static const SIGNUP = _Paths.SIGNUP;
   static const PHONELOGIN = _Paths.PHONELOGIN;
   static const OTPSCREEN = _Paths.OTPSCREEN;
+  static const CONTENTHOME = _Paths.CONTENTHOME;
+  static const CONTENTEVENT = _Paths.CONTENTEVENT;
+  static const CONTENTCOURSE = _Paths.CONTENTCOURSE;
+  static const CONTENTPROFILE = _Paths.CONTENTPROFILE;
 }
 
 abstract class _Paths {
@@ -17,4 +21,8 @@ abstract class _Paths {
   static const SIGNUP = '/signup';
   static const PHONELOGIN = '/phonelogin';
   static const OTPSCREEN = '/otpscreen';
+  static const CONTENTHOME = '/contenthome';
+  static const CONTENTEVENT = '/contentevent';
+  static const CONTENTCOURSE = '/contentcourse';
+  static const CONTENTPROFILE = '/contentprofile';
 }
