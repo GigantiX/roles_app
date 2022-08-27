@@ -37,43 +37,59 @@ class HomeView extends GetView<HomeController> {
             ],
           ),
         ),
-        bottomNavigationBar: Container(
-          color: Colors.white,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: 15,
-                vertical: 10
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.only(
+            bottom: 17,
+            left: 8,
+            right: 8
+          ),
+          child: Container(
+            decoration: BoxDecoration(
+              // border: Border.all(),
+              borderRadius: BorderRadius.all(Radius.circular(27)),
+              color: Colors.indigoAccent
             ),
-            child:
-            GNav(
-                tabBackgroundColor: Colors.cyan.withOpacity(0.7),
-                color: Colors.black45,
-                activeColor: Colors.white,
-                iconSize: 24,
-                padding: EdgeInsets.all(16),
-                selectedIndex: controller.tabIndex,
-                onTabChange: controller.changeTab,
-                gap: 8,
-                // curve: Curves.easeInExpo,
-                // duration: Duration(microseconds: 800),
-                tabs: const [
-                  GButton(
-                    icon: Icons.home,
-                    text: 'Home',
+            // color: Colors.black45,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 5,
+                  vertical: 5
+              ),
+              child:
+              GNav(
+                  tabBackgroundColor: Colors.white,
+                  haptic: true,
+                  color: Colors.black45,
+                  activeColor: Colors.blueGrey,
+                  iconSize: 24,
+                  padding: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 15
                   ),
-                  GButton(
-                    icon: Icons.event_note,
-                    text: 'Event',
-                  ),
-                  GButton(
-                    icon: Icons.video_collection,
-                    text: 'Course',
-                  ),
-                  GButton(
-                    icon: Icons.people_alt_sharp,
-                    text: 'Profile',
-                  ),
-                ]),
+                  selectedIndex: controller.tabIndex,
+                  onTabChange: controller.changeTab,
+                  gap: 8,
+                  // curve: Curves.easeInExpo,
+                  // duration: Duration(microseconds: 800),
+                  tabs: const [
+                    GButton(
+                      icon: Icons.home,
+                      text: 'Home',
+                    ),
+                    GButton(
+                      icon: Icons.event_note,
+                      text: 'Event',
+                    ),
+                    GButton(
+                      icon: Icons.video_collection,
+                      text: 'Course',
+                    ),
+                    GButton(
+                      icon: Icons.people_alt_sharp,
+                      text: 'Profile',
+                    ),
+                  ]),
+            ),
           ),
         ),
       );
