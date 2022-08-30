@@ -3,6 +3,7 @@ import 'package:approle/app/modules/contentcourse/views/contentcourse_view.dart'
 import 'package:approle/app/modules/contentevent/views/contentevent_view.dart';
 import 'package:approle/app/modules/contenthome/views/contenthome_view.dart';
 import 'package:approle/app/modules/contentprofile/views/contentprofile_view.dart';
+import 'package:approle/color_pack.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,7 @@ class HomeView extends GetView<HomeController> {
             decoration: BoxDecoration(
               // border: Border.all(),
               borderRadius: BorderRadius.all(Radius.circular(27)),
-              color: Colors.indigoAccent
+              color: CoMidBlue
             ),
             // color: Colors.black45,
             child: Padding(
@@ -59,7 +60,7 @@ class HomeView extends GetView<HomeController> {
               GNav(
                   tabBackgroundColor: Colors.white,
                   haptic: true,
-                  color: Colors.black45,
+                  color: CoDarkBlue,
                   activeColor: Colors.blueGrey,
                   iconSize: 24,
                   padding: EdgeInsets.symmetric(

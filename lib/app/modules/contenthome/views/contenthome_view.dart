@@ -8,10 +8,6 @@ class ContenthomeView extends GetView<ContenthomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('ContenthomeView'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Text(
           'ContenthomeView is working',
