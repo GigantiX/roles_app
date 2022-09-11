@@ -8,12 +8,13 @@ class ContenthomeView extends GetView<ContenthomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          'ContenthomeView is working',
-          style: TextStyle(fontSize: 20),
+      resizeToAvoidBottomInset: false,
+      body: Container(
+        constraints: BoxConstraints.expand(),
+        child: SingleChildScrollView(
+
         ),
-      ),
+      )
     );
   }
 }

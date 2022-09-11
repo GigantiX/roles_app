@@ -48,7 +48,7 @@ class HomeView extends GetView<HomeController> {
             decoration: BoxDecoration(
               // border: Border.all(),
               borderRadius: BorderRadius.all(Radius.circular(27)),
-              color: CoMidBlue
+              color: CoPurple
             ),
             // color: Colors.black45,
             child: Padding(
@@ -60,7 +60,7 @@ class HomeView extends GetView<HomeController> {
               GNav(
                   tabBackgroundColor: Colors.white,
                   haptic: true,
-                  color: CoDarkBlue,
+                  color: CoLightBlue,
                   activeColor: Colors.blueGrey,
                   iconSize: 24,
                   padding: EdgeInsets.symmetric(

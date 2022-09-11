@@ -128,20 +128,20 @@ class LoginView extends GetView<LoginController> {
                                   onPrimary: Colors.red,
                                   fixedSize: const Size(50, 50)),
                             ),
-                            SizedBox(
-                              width: 30,
-                            ),
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Icon(Icons.mail, color: Colors.white),
-                              style: ElevatedButton.styleFrom(
-                                  shape: CircleBorder(),
-                                  primary: Colors.blue,
-                                  // ^ Button color
-                                  onPrimary: Colors.red,
-                                  // ^ Splash color
-                                  fixedSize: const Size(50, 50)),
-                            ),
+                            //  SizedBox(
+                            //   width: 30,
+                            // ),
+                            // ElevatedButton(
+                            //   onPressed: () {},
+                            //   child: Icon(Icons.mail, color: Colors.white),
+                            //   style: ElevatedButton.styleFrom(
+                            //       shape: CircleBorder(),
+                            //       primary: Colors.blue,
+                            //       // ^ Button color
+                            //       onPrimary: Colors.red,
+                            //       // ^ Splash color
+                            //       fixedSize: const Size(50, 50)),
+                            // ),
                           ],
                         ),
                       ],
