@@ -38,9 +38,11 @@ class HomeView extends GetView<HomeController> {
             ],
           ),
         ),
-        bottomNavigationBar: Padding(
+        bottomNavigationBar: Container(
+          color: CoButtomBar,
           padding: const EdgeInsets.only(
-            bottom: 17,
+            top: 8,
+              bottom: 8,
             left: 8,
             right: 8
           ),
@@ -48,7 +50,7 @@ class HomeView extends GetView<HomeController> {
             decoration: BoxDecoration(
               // border: Border.all(),
               borderRadius: BorderRadius.all(Radius.circular(27)),
-              color: CoPurple
+              color: CoButtomBar
             ),
             // color: Colors.black45,
             child: Padding(
@@ -60,7 +62,7 @@ class HomeView extends GetView<HomeController> {
               GNav(
                   tabBackgroundColor: Colors.white,
                   haptic: true,
-                  color: CoLightBlue,
+                  color: Colors.white,
                   activeColor: Colors.blueGrey,
                   iconSize: 24,
                   padding: EdgeInsets.symmetric(

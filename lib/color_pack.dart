@@ -11,3 +11,6 @@ const CoMaroon = Color(0xffa31621);
 const CoDarkFont = Colors.black45;
 const CoMidFont = Colors.white10;
 const CoPurple = Color(0xff684bde);
+const CoWhiteGrey = Color(0xffececeb);
+const CoButtomBar = Color(0xff38a3a5);
+
