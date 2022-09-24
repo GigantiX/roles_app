@@ -1,6 +1,5 @@
 import 'package:approle/app/modules/phonelogin/views/phonelogin_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animated_button/flutter_animated_button.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,6 +10,38 @@ class ContentprofileView extends GetView<ContentprofileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        actions: [
+          PopupMenuButton(
+            icon: Icon(Icons.settings_rounded,color: Colors.black,),
+            color: Colors.white,
+              itemBuilder: (context) =>[
+                PopupMenuItem(
+                  onTap: () => authC.logout(),
+                    child: Row(
+                      children: [
+                        Icon(Icons.logout, color: Colors.black,),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text('Logout')
+                      ],
+                    )
+                ),
+              ]
+          )
+        ],
+        title: Text(
+          'Profile',
+          style: GoogleFonts.poppins(
+              fontSize: 25,
+              fontWeight: FontWeight.w500,
+              color: Colors.black,
+          ),
+        ),
+      ),
         resizeToAvoidBottomInset: false,
         body: Container(
           width: MediaQuery.of(context).size.width,
@@ -20,14 +51,6 @@ class ContentprofileView extends GetView<ContentprofileController> {
               mainAxisAlignment: MainAxisAlignment.center,
               // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 10,),
-                Text(
-                    'Profile',
-                  style: GoogleFonts.poppins(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                  ),
-                ),
                 SizedBox(
                   height: 10,
                 ),
@@ -41,7 +64,7 @@ class ContentprofileView extends GetView<ContentprofileController> {
                     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       SizedBox(
-                        width: 10,
+                        width: 5,
                       ),
                       CircleAvatar(
                         radius: 44,
@@ -73,20 +96,25 @@ class ContentprofileView extends GetView<ContentprofileController> {
                           ],
                         ),
                       ),
-                      AnimatedButton(
-                        text: 'Logout',
-                        onPress: () => authC.logout(),
-                        width: 85,
-                        height: 40,
-                        transitionType: TransitionType.CENTER_TB_OUT,
-                        selectedBackgroundColor: Colors.black45,
-                        selectedTextColor: Colors.white,
-                        backgroundColor: Colors.indigoAccent,
-                        isReverse: true,
-                        borderRadius: 20,
-                        textStyle: GoogleFonts.poppins(
-                          fontSize: 18,
-                          color: Colors.white
+                      SizedBox(
+                        width: 20,
+                      ),
+                      SizedBox(
+                        width: 45,
+                        height: 45,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: CircleBorder(),
+                              // padding: EdgeInsets.all(20),
+                              primary: Colors.white,
+                              shadowColor: Colors.white
+                            ),
+                            onPressed: () {},
+                            child: Icon(
+                              Icons.edit,
+                              color: Colors.black,
+                              size: 17,
+                            ),
                         ),
                       ),
                       // ElevatedButton(
