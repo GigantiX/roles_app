@@ -32,10 +32,13 @@ class PhoneloginView extends GetView<PhoneloginController> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                SizedBox(
+                  height: 70,
+                ),
                 Image.asset(
-                  'assets/images/iconRoles.png',
-                  height: 260,
-                  width: 260,
+                  'assets/images/DiviAcademy.png',
+                  height: 180,
+                  width: 180,
                 ),
                 Container(
                   height: 300,

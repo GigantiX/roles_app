@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:material_dialogs/material_dialogs.dart';
+import 'package:material_dialogs/widgets/buttons/icon_button.dart';
+import 'package:material_dialogs/widgets/buttons/icon_outline_button.dart';
 
 import '../controllers/contentprofile_controller.dart';
 
@@ -19,7 +22,34 @@ class ContentprofileView extends GetView<ContentprofileController> {
             color: Colors.white,
               itemBuilder: (context) =>[
                 PopupMenuItem(
-                  onTap: () => authC.logout(),
+                  onTap: () => Future.delayed(
+                    const Duration(seconds: 0),
+                      () => Dialogs.materialDialog(
+                          msg: 'Are you sure want to Logout?',
+                          title: "Logout",
+                          color: Colors.white,
+                          context: context,
+                          actions: [
+                            IconsOutlineButton(
+                              onPressed: () {
+                                Get.back();
+                                Get.back();
+                              },
+                              text: 'Cancel',
+                              iconData: Icons.cancel_outlined,
+                              textStyle: TextStyle(color: Colors.grey),
+                              iconColor: Colors.grey,
+                            ),
+                            IconsButton(
+                              onPressed: () => authC.logout(),
+                              text: 'Logout',
+                              iconData: Icons.logout,
+                              color: Colors.red,
+                              textStyle: TextStyle(color: Colors.white),
+                              iconColor: Colors.white,
+                            ),
+                          ])
+                  ),
                     child: Row(
                       children: [
                         Icon(Icons.logout, color: Colors.black,),
@@ -97,25 +127,11 @@ class ContentprofileView extends GetView<ContentprofileController> {
                         ),
                       ),
                       SizedBox(
-                        width: 20,
+                        width: 30,
                       ),
-                      SizedBox(
-                        width: 45,
-                        height: 45,
-                        child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              shape: CircleBorder(),
-                              // padding: EdgeInsets.all(20),
-                              primary: Colors.white,
-                              shadowColor: Colors.white
-                            ),
-                            onPressed: () {},
-                            child: Icon(
-                              Icons.edit,
-                              color: Colors.black,
-                              size: 17,
-                            ),
-                        ),
+                      IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.edit)
                       ),
                       // ElevatedButton(
                       //     onPressed: () => authC.logout(),

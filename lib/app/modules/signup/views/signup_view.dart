@@ -28,10 +28,13 @@ class SignupView extends GetView<SignupController> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                SizedBox(
+                  height: 70,
+                ),
                 Image.asset(
-                  'assets/images/iconRoles.png',
-                  height: 260,
-                  width: 260,
+                  'assets/images/DiviAcademy.png',
+                  height: 180,
+                  width: 180,
                 ),
                 Container(
                   height: 360,
@@ -48,7 +51,7 @@ class SignupView extends GetView<SignupController> {
                         Text(
                           'Email Sign Up',
                           style: TextStyle(
-                              fontSize: 30, fontWeight: FontWeight.bold),
+                              fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
                           height: 10,

@@ -16,6 +16,8 @@ import 'package:approle/app/modules/otpscreen/bindings/otpscreen_binding.dart';
 import 'package:approle/app/modules/otpscreen/views/otpscreen_view.dart';
 import 'package:approle/app/modules/phonelogin/bindings/phonelogin_binding.dart';
 import 'package:approle/app/modules/phonelogin/views/phonelogin_view.dart';
+import 'package:approle/app/modules/setprofile/bindings/setprofile_binding.dart';
+import 'package:approle/app/modules/setprofile/views/setprofile_view.dart';
 import 'package:approle/app/modules/signup/bindings/signup_binding.dart';
 import 'package:approle/app/modules/signup/views/signup_view.dart';
 
@@ -71,6 +73,11 @@ class AppPages {
       name: _Paths.CONTENTPROFILE,
       page: () => ContentprofileView(),
       binding: ContentprofileBinding(),
+    ),
+    GetPage(
+      name: _Paths.SETPROFILE,
+      page: () => SetprofileView(),
+      binding: SetprofileBinding(),
     ),
   ];
 }

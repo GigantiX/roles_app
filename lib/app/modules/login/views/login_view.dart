@@ -29,10 +29,16 @@ class LoginView extends GetView<LoginController> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                SizedBox(
+                  height: 70,
+                ),
                 Image.asset(
-                  'assets/images/iconRoles.png',
-                  height: 260,
-                  width: 260,
+                  'assets/images/DiviAcademy.png',
+                  height: 180,
+                  width: 180,
+                ),
+                SizedBox(
+                  height: 20,
                 ),
                 Container(
                   height: 360,
@@ -49,7 +55,7 @@ class LoginView extends GetView<LoginController> {
                         Text(
                           'Login',
                           style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
+                              fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
                           height: 10,

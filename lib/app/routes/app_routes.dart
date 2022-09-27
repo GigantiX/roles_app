@@ -13,6 +13,7 @@ abstract class Routes {
   static const CONTENTEVENT = _Paths.CONTENTEVENT;
   static const CONTENTCOURSE = _Paths.CONTENTCOURSE;
   static const CONTENTPROFILE = _Paths.CONTENTPROFILE;
+  static const SETPROFILE = _Paths.SETPROFILE;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const CONTENTEVENT = '/contentevent';
   static const CONTENTCOURSE = '/contentcourse';
   static const CONTENTPROFILE = '/contentprofile';
+  static const SETPROFILE = '/setprofile';
 }
