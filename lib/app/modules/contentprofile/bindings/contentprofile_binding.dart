@@ -6,7 +6,7 @@ class ContentprofileBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<ContentprofileController>(
-      () => ContentprofileController(),
+      () => ContentprofileController(), fenix: true
     );
   }
 }
