@@ -70,4 +70,5 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:30.0.1')
     implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
     implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.android.play:integrity:1.1.0'
 }
